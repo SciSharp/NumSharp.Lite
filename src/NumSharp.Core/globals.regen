@@ -1,0 +1,33 @@
+﻿%all_dtypes = ["Boolean","Byte","Int32","Int64","Single","Double","String"]
+%all_dtypes_lowercase = ["bool","byte","int","long","float","double","string"]
+
+%supported_primitives = ["Boolean","Byte","Int32","Int64","Single","Double","String"]
+%supported_primitives_lowercase = ["bool","byte","int","long","float","double","string"]
+
+%supported_numericals = ["Byte","Int32","Int64","Single","Double"]
+%supported_numericals_lowercase = ["byte","int","long","float","double"]
+%supported_numericals_defaultvals = ["0","0","0L","0f","0d"]
+%supported_numericals_onevales = ["1","1","1L","1f","1d"]
+
+//this is the type we use in summerizing/reducting:
+%supported_numericals_accumulatingType = ["Byte","Int32","Int64","Single","Double"]
+%supported_numericals_accumulatingType_defaultvals = ["0","0","0L","0f","0d"]
+//this is the type we use in summerizing/reducting:
+%supported_dtypes_accumulatingType = ["Byte","Int32","Int64","Single","Double"]
+%supported_dtypes_accumulatingType_defaultvals = ["0","0","0L","0f","0d"]
+
+%supported_numericals_signed = ["Byte","Int32","Int64","Single","Double"]
+%supported_numericals_signed_lowercase = ["byte","int","long","float","double"]
+%supported_numericals_signed_defaultvals = ["0","0","0L","0f","0d"]
+%supported_numericals_signed_onevales = ["1","1","1L","1f","1d"]
+
+%supported_numericals_unsigned = ["Byte","UInt16","UInt32","UInt64"]
+%supported_numericals_unsigned_lowercase = ["byte","ushort","uint","ulong"]
+%supported_numericals_unsigned_defaultvals = ["0","0","0U","0UL"]
+%supported_numericals_unsigned_onevales = ["1","1","1U","1UL"]
+
+%supported_dtypes = ["Boolean","Byte","Int32","Int64","Single","Double"]
+%supported_dtypes_lowercase = ["bool","byte","int","long","float","double"]
+%supported_dtypes_defaultvals = [false,"0","0","0L","0f","0d"]
+%supported_dtypes_onevales = [true,"1","1","1L","1f","1d"]
+%supported_dtypes_dtype = ["bool","int8","int32","int64","float32","float64"]
