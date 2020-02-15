@@ -5,26 +5,25 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Authors>Eli Belash, Haiping Chen, Meinrad Recheis, Deepak Kumar Battini</Authors>
+    <Authors>Haiping Chen</Authors>
     <PackageOutputPath>../../packages</PackageOutputPath>
-    <Description>NumSharp is the fundamental library for scientific computing with .NET providing a similar API to python's numpy scientific library. NumSharp has full N-D, broadcasting and axis support.  If you want to use .NET to get started with machine learning, NumSharp will be your best tool.</Description>
+    <Description>NumSharp.Lite is the compact version of NumSharp without full datatype supported.</Description>
     <PackageProjectUrl>https://github.com/SciSharp</PackageProjectUrl>
-    <Copyright>2019 © SciSharp STACK Team</Copyright>
-    <RepositoryUrl>https://github.com/SciSharp/NumSharp</RepositoryUrl>
-    <PackageReleaseNotes>NumSharp compact version.
-Removed Int16, UInt16, UInt32, UInt64, Decimal and Char datatypes.</PackageReleaseNotes>
-    <AssemblyVersion>0.30.0</AssemblyVersion>
-    <FileVersion>0.30.0</FileVersion>
+    <Copyright>2020 © SciSharp STACK Team</Copyright>
+    <RepositoryUrl>https://github.com/SciSharp/NumSharp.Lite</RepositoryUrl>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <FileVersion>0.1.0</FileVersion>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Numpy, NumSharp, MachineLearning, Math, Scientific, Numeric, Mathlab, SciSharp</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
     <LangVersion>7.3</LangVersion>
     <PackageIconUrl>https://avatars3.githubusercontent.com/u/44989469?s=200&amp;v=4</PackageIconUrl>
-    <PackageId>NumSharp</PackageId>
-    <Product>NumSharp</Product>
+    <PackageId>NumSharp.Lite</PackageId>
+    <Product>NumSharp.Lite</Product>
     <Company>SciSharp STACK</Company>
     <RootNamespace>NumSharp</RootNamespace>
-    <Version>0.30.0-alpha</Version>
+    <Version>0.1.0</Version>
     <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>
@@ -123,7 +122,7 @@ Removed Int16, UInt16, UInt32, UInt64, Decimal and Char datatypes.</PackageRelea
     <None Remove="NumSharp.Core.csproj.DotSettings" />
     <None Remove="Open.snk" />
     <None Remove="Operations\NdArray.ElementsWise.tt" />
-    <None Include="..\..\LICENSE">
+    <None Include="..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

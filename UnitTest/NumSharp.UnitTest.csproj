@@ -105,6 +105,6 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\NumSharp.Core\NumSharp.Lite.csproj" />
+    <ProjectReference Include="..\NumSharp\NumSharp.Lite.csproj" />
   </ItemGroup>
 </Project>
