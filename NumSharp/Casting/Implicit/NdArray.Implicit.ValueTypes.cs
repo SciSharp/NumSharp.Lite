@@ -136,6 +136,14 @@ namespace NumSharp
             return nd.GetAtIndex<byte>(0);
         }
 
+        public static implicit operator (byte, byte, byte)(NDArray nd)
+        {
+            if (nd.ndim != 0)
+                throw new IncorrectShapeException();
+
+            return (nd.GetAtIndex<byte>(0), nd.GetAtIndex<byte>(1), nd.GetAtIndex<byte>(2));
+        }
+
         //char operators
         public static implicit operator NDArray(char d) => NDArray.Scalar<char>(d);
 
