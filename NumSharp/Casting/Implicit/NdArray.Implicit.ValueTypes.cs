@@ -136,12 +136,14 @@ namespace NumSharp
             return nd.GetAtIndex<byte>(0);
         }
 
-        public static implicit operator (byte, byte, byte)(NDArray nd)
+        public void Deconstruct(out byte b, out byte g, out byte r)
         {
-            if (nd.ndim != 0)
+            if (ndim != 0)
                 throw new IncorrectShapeException();
 
-            return (nd.GetAtIndex<byte>(0), nd.GetAtIndex<byte>(1), nd.GetAtIndex<byte>(2));
+            b = GetAtIndex<byte>(0);
+            g = GetAtIndex<byte>(1);
+            r = GetAtIndex<byte>(2);
         }
 
         //char operators
