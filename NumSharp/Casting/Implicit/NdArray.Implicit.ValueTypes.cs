@@ -138,7 +138,7 @@ namespace NumSharp
 
         public void Deconstruct(out byte b, out byte g, out byte r)
         {
-            if (ndim != 0)
+            if (ndim == 0)
                 throw new IncorrectShapeException();
 
             b = GetAtIndex<byte>(0);
