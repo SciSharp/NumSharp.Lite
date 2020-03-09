@@ -24,7 +24,7 @@ Deconstruct NDArray to tuple(byte, byte, byte).</PackageReleaseNotes>
     <Product>NumSharp.Lite</Product>
     <Company>SciSharp STACK</Company>
     <RootNamespace>NumSharp</RootNamespace>
-    <Version>0.1.4</Version>
+    <Version>0.1.5</Version>
     <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>

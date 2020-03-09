@@ -18,6 +18,7 @@
 
 using System;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using NumSharp.Backends;
 using NumSharp.Utilities;
@@ -105,6 +106,11 @@ namespace NumSharp
             }
         }
 
+        public static implicit operator string(NDArray nd)
+        {
+            return UTF8Encoding.UTF8.GetString(nd.GetData<byte>().ToArray());
+        }
+
         public static implicit operator NDArray(string str)
         {
             // process "[1, 2, 3]" 
@@ -159,8 +165,7 @@ namespace NumSharp
             }
             else
             {
-                // UTF8Encoding.UTF8.GetBytes(str)
-                var nd = new NDArray(str.ToArray());
+                var nd = new NDArray(UTF8Encoding.UTF8.GetBytes(str));
                 return nd;
             }
         }

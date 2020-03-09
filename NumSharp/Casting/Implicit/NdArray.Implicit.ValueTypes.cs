@@ -192,7 +192,5 @@ namespace NumSharp
 #endif
 
         public static implicit operator NDArray(Complex d) => NDArray.Scalar<Complex>(d);
-
-        public static explicit operator string(NDArray d) => d.ToString(false);
     }
 }
