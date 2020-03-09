@@ -106,12 +106,12 @@ namespace NumSharp
             }
         }
 
-        public static implicit operator string(NDArray nd)
+        public static explicit operator string(NDArray nd)
         {
             return UTF8Encoding.UTF8.GetString(nd.GetData<byte>().ToArray());
         }
 
-        public static implicit operator NDArray(string str)
+        public static explicit operator NDArray(string str)
         {
             // process "[1, 2, 3]" 
             if (new Regex(@"^\[[\d,\s\.]+\]$").IsMatch(str))
