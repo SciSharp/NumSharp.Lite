@@ -32,6 +32,7 @@ namespace NumSharp.Backends
 #else
         protected ArraySlice<bool> _arrayBoolean;
         protected ArraySlice<byte> _arrayByte;
+        protected ArraySlice<char> _arrayChar;
         protected ArraySlice<int> _arrayInt32;
         protected ArraySlice<long> _arrayInt64;
         protected ArraySlice<float> _arraySingle;
@@ -514,8 +515,15 @@ namespace NumSharp.Backends
                 case NPTypeCode.Byte:
                 {
                     InternalArray = _arrayByte = (ArraySlice<byte>)array;
-                    Address = (byte*) _arrayByte.Address;
+                    Address = _arrayByte.Address;
                     Count = _arrayByte.Count;
+                    break;
+                }
+                case NPTypeCode.Char:
+                {
+                    InternalArray = _arrayChar = (ArraySlice<char>)array;
+                    Address = (byte*)_arrayChar.Address;
+                    Count = _arrayChar.Count;
                     break;
                 }
                 case NPTypeCode.Int32:

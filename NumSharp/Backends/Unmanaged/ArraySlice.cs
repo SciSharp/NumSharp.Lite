@@ -207,7 +207,8 @@ namespace NumSharp.Backends.Unmanaged
 #else
 	            case NPTypeCode.Boolean: return new ArraySlice<bool>(UnmanagedMemoryBlock<bool>.FromArray(copy ? (bool[])arr.Clone() : (bool[])arr));
 	            case NPTypeCode.Byte: return new ArraySlice<byte>(UnmanagedMemoryBlock<byte>.FromArray(copy ? (byte[])arr.Clone() : (byte[])arr));
-	            case NPTypeCode.Int32: return new ArraySlice<int>(UnmanagedMemoryBlock<int>.FromArray(copy ? (int[])arr.Clone() : (int[])arr));
+                case NPTypeCode.Char: return new ArraySlice<char>(UnmanagedMemoryBlock<char>.FromArray(copy ? (char[])arr.Clone() : (char[])arr));
+                case NPTypeCode.Int32: return new ArraySlice<int>(UnmanagedMemoryBlock<int>.FromArray(copy ? (int[])arr.Clone() : (int[])arr));
 	            case NPTypeCode.Int64: return new ArraySlice<long>(UnmanagedMemoryBlock<long>.FromArray(copy ? (long[])arr.Clone() : (long[])arr));
 	            case NPTypeCode.Single: return new ArraySlice<float>(UnmanagedMemoryBlock<float>.FromArray(copy ? (float[])arr.Clone() : (float[])arr));
 	            case NPTypeCode.Double: return new ArraySlice<double>(UnmanagedMemoryBlock<double>.FromArray(copy ? (double[])arr.Clone() : (double[])arr));
@@ -398,7 +399,8 @@ namespace NumSharp.Backends.Unmanaged
 #else
 	            case NPTypeCode.Boolean: return new ArraySlice<bool>(new UnmanagedMemoryBlock<bool>(count));
 	            case NPTypeCode.Byte: return new ArraySlice<byte>(new UnmanagedMemoryBlock<byte>(count));
-	            case NPTypeCode.Int32: return new ArraySlice<int>(new UnmanagedMemoryBlock<int>(count));
+                case NPTypeCode.Char: return new ArraySlice<char>(new UnmanagedMemoryBlock<char>(count));
+                case NPTypeCode.Int32: return new ArraySlice<int>(new UnmanagedMemoryBlock<int>(count));
 	            case NPTypeCode.Int64: return new ArraySlice<long>(new UnmanagedMemoryBlock<long>(count));
 	            case NPTypeCode.Single: return new ArraySlice<float>(new UnmanagedMemoryBlock<float>(count));
 	            case NPTypeCode.Double: return new ArraySlice<double>(new UnmanagedMemoryBlock<double>(count));

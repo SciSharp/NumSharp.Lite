@@ -80,7 +80,22 @@ namespace NumSharp
                         }
                         break;
 			        }
-			        case NPTypeCode.Int32:
+                    case NPTypeCode.Char:
+                    {
+                        var addr = (char*)x.Address;
+                        var addr_index0 = addr + transformOffset(0);
+                        char tmp; //index 0
+                        char* addr_swap;
+                        while (count-- > 1)
+                        {
+                            tmp = *addr_index0;
+                            addr_swap = addr + transformOffset(randomizer.Next(size));
+                            *addr_index0 = *addr_swap;
+                            *addr_swap = tmp;
+                        }
+                        break;
+                    }
+                    case NPTypeCode.Int32:
 			        {
 				        var addr = (int*)x.Address;
                         var addr_index0 = addr + transformOffset(0);

@@ -126,7 +126,8 @@ namespace NumSharp
 		    {
 			    case NPTypeCode.Boolean: setDefaults_Boolean(); break;
 			    case NPTypeCode.Byte: setDefaults_Byte(); break;
-			    case NPTypeCode.Int32: setDefaults_Int32(); break;
+                case NPTypeCode.Char: setDefaults_Char(); break;
+                case NPTypeCode.Int32: setDefaults_Int32(); break;
 			    case NPTypeCode.Int64: setDefaults_Int64(); break;
 			    case NPTypeCode.Single: setDefaults_Single(); break;
 			    case NPTypeCode.Double: setDefaults_Double(); break;

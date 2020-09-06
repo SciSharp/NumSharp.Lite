@@ -253,12 +253,13 @@ namespace NumSharp
             #region Compute
 		    switch (src.typecode)
 		    {
-			    case NPTypeCode.Boolean: return FetchIndices<bool>(src.MakeGeneric<bool>(), indices, @out, extraDim);
-			    case NPTypeCode.Byte: return FetchIndices<byte>(src.MakeGeneric<byte>(), indices, @out, extraDim);
-			    case NPTypeCode.Int32: return FetchIndices<int>(src.MakeGeneric<int>(), indices, @out, extraDim);
-			    case NPTypeCode.Int64: return FetchIndices<long>(src.MakeGeneric<long>(), indices, @out, extraDim);
-			    case NPTypeCode.Single: return FetchIndices<float>(src.MakeGeneric<float>(), indices, @out, extraDim);
-			    case NPTypeCode.Double: return FetchIndices<double>(src.MakeGeneric<double>(), indices, @out, extraDim);
+			    case NPTypeCode.Boolean: return FetchIndices(src.MakeGeneric<bool>(), indices, @out, extraDim);
+			    case NPTypeCode.Byte: return FetchIndices(src.MakeGeneric<byte>(), indices, @out, extraDim);
+                case NPTypeCode.Char: return FetchIndices(src.MakeGeneric<char>(), indices, @out, extraDim);
+                case NPTypeCode.Int32: return FetchIndices(src.MakeGeneric<int>(), indices, @out, extraDim);
+			    case NPTypeCode.Int64: return FetchIndices(src.MakeGeneric<long>(), indices, @out, extraDim);
+			    case NPTypeCode.Single: return FetchIndices(src.MakeGeneric<float>(), indices, @out, extraDim);
+			    case NPTypeCode.Double: return FetchIndices(src.MakeGeneric<double>(), indices, @out, extraDim);
 			    default:
 				    throw new NotSupportedException();
 		    }

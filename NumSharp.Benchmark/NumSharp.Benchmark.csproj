@@ -9,4 +9,8 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.12.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NumSharp\NumSharp.Lite.csproj" />
+  </ItemGroup>
+
 </Project>

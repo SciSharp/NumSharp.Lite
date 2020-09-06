@@ -134,7 +134,8 @@ namespace NumSharp
 #else
 	            case NPTypeCode.Boolean: return typeof(bool);
 	            case NPTypeCode.Byte: return typeof(byte);
-	            case NPTypeCode.Int32: return typeof(int);
+                case NPTypeCode.Char: return typeof(char);
+                case NPTypeCode.Int32: return typeof(int);
 	            case NPTypeCode.Int64: return typeof(long);
 	            case NPTypeCode.Single: return typeof(float);
 	            case NPTypeCode.Double: return typeof(double);

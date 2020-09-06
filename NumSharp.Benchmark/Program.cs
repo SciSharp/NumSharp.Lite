@@ -2,6 +2,7 @@
 using System.Reflection;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Running;
+using NumSharp;
 
 namespace NumSharp.Benchmark
 {
@@ -9,6 +10,10 @@ namespace NumSharp.Benchmark
     {
         static void Main(string[] args)
         {
+            var file = @"C:\Users\haipi\AppData\Local\Temp\mnist.npz";
+            var datax = np.Load_Npz<byte[,,]>(file);
+            var datay = np.Load_Npz<byte[]>(file);
+
             if (args?.Length > 0)
             {
                 for (int i = 0; i < args.Length; i++)

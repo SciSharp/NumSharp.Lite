@@ -7,24 +7,16 @@ namespace NumSharp.Experiment
     {
         unsafe static void Main(string[] args)
         {
-            var data = new float[] { 32, 64, 128, 256, 512 };
+            var int32 = new float[] { 32, 64, 128, 256, 512, 1024 };
+            var float32 = new float[] { 32.0f, 64.0f, 128.0f, 256.0f, 512.0f, 1024.0f };
 
             // allocate memory in bytes
-            var byteSize = data.Length * sizeof(float);
-            var storage = new byte[byteSize];
+            var storage = new Storage("float32", float32.Length);
 
             // copy data to storage
-            fixed (void* src = &data[0])
-            fixed (void* dst = &storage[0])
-            {
-                Buffer.MemoryCopy(src, dst, byteSize, byteSize);
+            storage.Copy(float32);
+            storage.Copy(int32);
 
-                for(int i = 0; i< data.Length; i++)
-                {
-                    Debug.Assert(*((float*)dst + i) == data[i]);
-                }
-                    
-            }
 
             Console.ReadLine();
         }
