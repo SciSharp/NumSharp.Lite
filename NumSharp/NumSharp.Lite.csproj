@@ -14,9 +14,10 @@
     <PackageReleaseNotes>Implicit from scalar NDArray to byte.
 Deconstruct NDArray to tuple(byte, byte, byte).
 Create NDArray from string[].
+Improve ToString() performance.
 </PackageReleaseNotes>
-    <AssemblyVersion>0.1.8</AssemblyVersion>
-    <FileVersion>0.1.8</FileVersion>
+    <AssemblyVersion>0.1.9</AssemblyVersion>
+    <FileVersion>0.1.9</FileVersion>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Numpy, NumSharp, MachineLearning, Math, Scientific, Numeric, Mathlab, SciSharp</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
@@ -26,7 +27,7 @@ Create NDArray from string[].
     <Product>NumSharp.Lite</Product>
     <Company>SciSharp STACK</Company>
     <RootNamespace>NumSharp</RootNamespace>
-    <Version>0.1.8</Version>
+    <Version>0.1.9</Version>
     <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>
