@@ -20,6 +20,28 @@ namespace NumSharp
 
                 return new NDArray(ints);
             }
+            else if (dtype.Name == "Single")
+            {
+                var size = bytes.Length / InfoOf<float>.Size;
+                var floats = new float[size];
+                for (var index = 0; index < size; index++)
+                {
+                    floats[index] = BitConverter.ToSingle(bytes, index * InfoOf<float>.Size);
+                }
+
+                return new NDArray(floats);
+            }
+            else if (dtype.Name == "Double")
+            {
+                var size = bytes.Length / InfoOf<double>.Size;
+                var doubles = new double[size];
+                for (var index = 0; index < size; index++)
+                {
+                    doubles[index] = BitConverter.ToDouble(bytes, index * InfoOf<double>.Size);
+                }
+
+                return new NDArray(doubles);
+            }
             else if (dtype.Name == "Byte")
             {
                 var size = bytes.Length / InfoOf<byte>.Size;
