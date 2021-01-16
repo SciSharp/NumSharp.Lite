@@ -16,8 +16,8 @@ Deconstruct NDArray to tuple(byte, byte, byte).
 Create NDArray from string[].
 Improve ToString() performance.
 Add float and double to np.frombuffer.</PackageReleaseNotes>
-    <AssemblyVersion>0.1.10</AssemblyVersion>
-    <FileVersion>0.1.10</FileVersion>
+    <AssemblyVersion>0.1.11</AssemblyVersion>
+    <FileVersion>0.1.11</FileVersion>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Numpy, NumSharp, MachineLearning, Math, Scientific, Numeric, Mathlab, SciSharp</PackageTags>
     <PackageLicenseUrl></PackageLicenseUrl>
@@ -27,7 +27,7 @@ Add float and double to np.frombuffer.</PackageReleaseNotes>
     <Product>NumSharp.Lite</Product>
     <Company>SciSharp STACK</Company>
     <RootNamespace>NumSharp</RootNamespace>
-    <Version>0.1.10</Version>
+    <Version>0.1.11</Version>
     <Version Condition=" '$(VersionSuffix)' != '' ">$(Version)-$(VersionSuffix)</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AssemblyOriginatorKeyFile>Open.snk</AssemblyOriginatorKeyFile>
