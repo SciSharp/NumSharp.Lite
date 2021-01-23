@@ -63,17 +63,12 @@ namespace NumSharp.Backends
         /// </summary>
         /// <remarks>Computed by <see cref="Marshal.SizeOf(object)"/></remarks>
         public int DTypeSize
-        {
-            get
+            => _typecode switch
             {
-                if (_typecode == NPTypeCode.String)
-                {
-                    return IntPtr.Size;
-                }
-
-                return Marshal.SizeOf(_dtype);
-            }
-        }
+                NPTypeCode.String => IntPtr.Size,
+                NPTypeCode.Boolean => sizeof(bool),
+                _ => Marshal.SizeOf(_dtype)
+            };
 
         /// <summary>
         ///     The shape representing the data in this storage.
